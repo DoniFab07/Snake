@@ -9,7 +9,7 @@ public class SnakeMovement : MonoBehaviour
 
     public int Length = 1;
 
-   // public TextMeshPro PointsText;
+   // public TextMeshProUGUI PointsText;
 
     private Camera mainCamera;
     private Rigidbody2D componentRigidbody;
@@ -26,7 +26,7 @@ public class SnakeMovement : MonoBehaviour
 
         for (int i = 0; i < Length; i++) componentSnakeTail.AddCircle();
 
-    //    PointsText.SetText(Length.ToString());
+      // PointsText.SetText(Length.ToString());
     }
 
     private void Update()
@@ -44,20 +44,6 @@ public class SnakeMovement : MonoBehaviour
             Vector2 delta = (Vector2) mainCamera.ScreenToViewportPoint(Input.mousePosition) - touchLastPos;
             sidewaysSpeed += delta.x * Sensitivity;
             touchLastPos = mainCamera.ScreenToViewportPoint(Input.mousePosition);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Length++;
-            componentSnakeTail.AddCircle();
-        //    PointsText.SetText(Length.ToString());
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Length--;
-            componentSnakeTail.RemoveCircle();
-         //   PointsText.SetText(Length.ToString());
         }
     }
 

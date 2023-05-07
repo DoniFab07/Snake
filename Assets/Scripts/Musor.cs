@@ -10,6 +10,12 @@ public class Musor : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    void Start()
+    {
+        Destroy(gameObject, 3);
+    }
+    
     void Update()
     {
         angel++;

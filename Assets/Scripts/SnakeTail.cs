@@ -48,4 +48,5 @@ public class SnakeTail : MonoBehaviour
         snakeCircles.RemoveAt(0);
         positions.RemoveAt(1);
     }
+   
 }
